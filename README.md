@@ -17,3 +17,35 @@ private coordinatesValidator(option: string) {
     };
   }
   ```
+
+# Docker cheatsheet
+
+### Launch container from docker-compose file
+
+```docker-compose up --build -d --force-recreate```
+
+### List images and containers
+
+```docker ps -a``` or ```docker container ls -a```
+Show list of all containers (-a). You can skip -a option to show only running.
+
+```docker images -a```
+Show list of all (-a) images
+
+### Remove imageas and containers
+
+_Remove all unused images_
+```docker image prune -a -f```
+Remove all (-a) unused images without confirmation (-f)
+
+_Remove all inactive containers_
+```docker container prune -f```
+Remove all stopped containers silently (-f)
+
+### Run terminal on detached active container
+
+_Launch interactive terminal_
+```docker exec -it 466a13554655 /bin/sh```
+
+_Exit interactive terminal_
+```exit```
