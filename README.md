@@ -20,6 +20,8 @@ private coordinatesValidator(option: string) {
 
 # Docker cheatsheet
 
+Examples of the [dev Dockerfile](https://github.com/dstuff/angular-code-snippets/blob/master/dev-Dockerfile) and [docker-compose](https://github.com/dstuff/angular-code-snippets/blob/master/dev-docker-compose.yml) for the development environment. It assumes that your Dockerfile and docker-compose located at the same directory as the app root.
+
 ### Launch container from docker-compose file
 
 ```docker-compose up --build -d --force-recreate```
@@ -34,7 +36,7 @@ Show list of all containers (-a). You can skip -a option to show only running.
 
 Show list of all (-a) images
 
-### Remove imageas and containers
+### Remove images and containers
 
 _Remove all unused images:_
 
