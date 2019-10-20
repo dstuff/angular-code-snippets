@@ -27,25 +27,31 @@ private coordinatesValidator(option: string) {
 ### List images and containers
 
 ```docker ps -a``` or ```docker container ls -a```
+
 Show list of all containers (-a). You can skip -a option to show only running.
 
 ```docker images -a```
+
 Show list of all (-a) images
 
 ### Remove imageas and containers
 
-_Remove all unused images_
-```docker image prune -a -f```
-Remove all (-a) unused images without confirmation (-f)
+_Remove all unused images:_
 
-_Remove all inactive containers_
+```docker image prune -a -f```
+
+Removes all (-a) unused images without confirmation (-f)
+
+_Remove all stopped containers:_
+
 ```docker container prune -f```
-Remove all stopped containers silently (-f)
 
 ### Run terminal on detached active container
 
-_Launch interactive terminal_
+_Launch interactive terminal:_
+
 ```docker exec -it 466a13554655 /bin/sh```
 
-_Exit interactive terminal_
+_Exit interactive terminal:_
+
 ```exit```
