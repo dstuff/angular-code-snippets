@@ -1,0 +1,18 @@
+version: '3.7'
+
+services:
+  app:
+    container_name: frontend-app
+    image: angular
+    build:
+      context: .
+      # define Dockerfile to use
+      dockerfile: dev-Dockerfile
+    volumes:
+      # mount working host directory for hot-reload ability
+      - './:/app'
+      # also we mount node_modules for accessing actual installed node packages
+      - './node_modules:/app/node_modules'
+    restart: always
+    ports:
+      - '4200:4200'
