@@ -1,0 +1,20 @@
+# base image
+FROM node:10.16.3-alpine as node
+
+WORKDIR /app
+
+# install Angular CLI tools like ng
+RUN npm install -g @angular/cli@8.1.3
+
+# install dependencies
+COPY package*.json /app/
+
+# We don't need `npm install here` because of mounting node_modules
+# as VOLUME via docker-compose file
+# RUN npm install
+
+# copy source code
+COPY . /app
+
+# start app
+CMD ng serve --host 0.0.0.0
